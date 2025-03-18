@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Loader } from "lucide-react";
-import { ClerkLoading, ClerkLoaded, SignedOut, SignedIn } from "@clerk/nextjs";
+import {
+  ClerkLoading,
+  ClerkLoaded,
+  SignedOut,
+  SignedIn,
+  SignUpButton,
+} from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -20,11 +26,15 @@ export default function Home() {
           <ClerkLoaded>
             {" "}
             <SignedOut>
-              <SighnUpButton>
+              <SignUpButton
+                mode="modal"
+                afterSignInUrl="/learn"
+                aftersignUpUrl="/learn"
+              >
                 <Button size="lg" variant="secindary" className="w-full">
                   Get Stared
                 </Button>
-              </SighnUpButton>
+              </SignUpButton>
             </SignedOut>
             <SignedIn></SignedIn>
           </ClerkLoaded>
