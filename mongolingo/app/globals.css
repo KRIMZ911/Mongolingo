@@ -2,13 +2,11 @@
 
 @plugin "tailwindcss-animate";
 
-@custom-variant dark (&:is(.dark *));
+@tailwind base; /* Important:  Add this! */
+@tailwind components;
+@tailwind utilities;
 
-html,
-body,
-:root {
-  @apply h-full;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -120,15 +118,15 @@ body,
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html,
+  body,
+  :root {
+    @apply h-full;
   }
   body {
     @apply bg-background text-foreground;
   }
-  html,
-  body,
-  :root {
-    @apply h-full; /* Use Tailwind's h-full utility */
+  * {
+    @apply border-border outline-ring/50;
   }
 }
