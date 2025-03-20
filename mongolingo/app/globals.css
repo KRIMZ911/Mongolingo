@@ -121,7 +121,7 @@
   html,
   body,
   :root {
-    @apply h-full;
+    height: 100%;
   }
   body {
     @apply bg-background text-foreground;
