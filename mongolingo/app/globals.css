@@ -1,10 +1,10 @@
 @import "tailwindcss";
-
+html,
+body,
+:root {
+  height: 100%;
+}
 @plugin "tailwindcss-animate";
-
-@tailwind base; /* Important:  Add this! */
-@tailwind components;
-@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 
@@ -49,6 +49,7 @@
 }
 
 :root {
+  height: 100%;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -118,11 +119,6 @@
 }
 
 @layer base {
-  html,
-  body,
-  :root {
-    height: 100%;
-  }
   body {
     @apply bg-background text-foreground;
   }
