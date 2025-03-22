@@ -13,7 +13,7 @@ const MainLayout = ({ children }: Props) => {
         <Sidebar />
       </div>
       <main className=" h-full pt-[50px] lg:pt-0">
-        <div className="bg-red-500 flex flex-col lg:ml-[256px] h-full">
+        <div className="max-w-[1050px] mx-auto pt-6 flex flex-col lg:ml-[256px] h-full">
           {children}
         </div>
       </main>
